@@ -54,7 +54,7 @@ fi
 # export mysql puppet module
 ##########################################
 
-git_loc="${git_url}/hysds-org/puppet-mysql"
+git_loc="${git_url}/hysds/puppet-mysql"
 mod_dir=$mods_dir/mysql
 site_pp=$mod_dir/site.pp
 
