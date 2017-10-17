@@ -17,6 +17,13 @@ class mysql {
   }
 
 
+  exec { "mariadb-start":
+    path    => ["/bin", "/usr/bin"],
+    command => "mysqld_safe",
+    require => Package["mariadb-server"],
+  }
+
+
   #####################################################
   # refresh ld cache
   #####################################################
@@ -27,19 +34,6 @@ class mysql {
       refreshonly => true, 
     }
   } 
-
-
-  #####################################################
-  # mysql service
-  #####################################################
-
-  service { 'mariadb':
-    ensure => running,
-    enable => true,
-    hasrestart => true,
-    hasstatus => true,
-    require => Package['mariadb-server'],
-  }
 
 
 }
