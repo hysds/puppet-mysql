@@ -7,7 +7,7 @@ cd $mods_dir
 # IMPORTANT: please edit this branch name to the version of the Azure         #
 #            adaptation that you want to install on every Puppet module       #
 ###############################################################################
-git_branch="azure-beta1"
+git_branch="azure"
 
 ##########################################
 # need to be root
