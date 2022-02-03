@@ -9,18 +9,18 @@ class mysql {
   #####################################################
 
   package {
-    'mariadb-server': ensure => installed;
-    'mariadb': ensure => installed;
-    'mariadb-devel': ensure => installed;
-    'mariadb-libs': ensure => installed;
-    'mysql-connector-python': ensure => installed;
+    'mysql-server': ensure => installed;
+    'mysql': ensure => installed;
+    'mysql-devel': ensure => installed;
+    'mysql-libs': ensure => installed;
+    'python3-mysqlclient': ensure => installed;
   }
 
 
-  exec { "mariadb-start":
+  exec { "mysql-start":
     path    => ["/bin", "/usr/bin"],
     command => "mysqld_safe",
-    require => Package["mariadb-server"],
+    require => Package["mysql-server"],
   }
 
 
