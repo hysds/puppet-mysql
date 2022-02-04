@@ -20,7 +20,7 @@ class mysql {
   exec { "mysql-start":
     path    => ["/bin", "/usr/bin"],
     command => "mysqld_safe",
-    require => Package["mysql-server"],
+    require => Package["mariadb-server"],
   }
 
 
