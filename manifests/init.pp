@@ -9,9 +9,9 @@ class mysql {
   #####################################################
 
   package {
-    'mysql-server': ensure => installed;
-    'mysql': ensure => installed;
-    'mysql-devel': ensure => installed;
+    'mariadb-server': ensure => installed;
+    'mariadb': ensure => installed;
+    'mariadb-devel': ensure => installed;
     'mysql-libs': ensure => installed;
     'python3-mysqlclient': ensure => installed;
   }
