@@ -12,8 +12,8 @@ class mysql {
     'mariadb-server': ensure => installed;
     'mariadb': ensure => installed;
     'mariadb-devel': ensure => installed;
-    'mariadb-libs': ensure => installed;
-    'mysql-connector-python': ensure => installed;
+    'mysql-libs': ensure => installed;
+    'python3-mysqlclient': ensure => installed;
   }
 
 
